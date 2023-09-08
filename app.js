@@ -10,13 +10,7 @@ app.get('/', (_, res) => {
     res.render('home');
 });
 
-app.get('/mainPage', (_, res) => {
-    res.render('mainPage');
-});
-
-app.get('/aboutPage', (_, res) => {
-    res.render('aboutPage');
-});
+module.exports = app;
 
 app.listen(port, () => {
     console.log(`Server is listening on port ${port}`);
