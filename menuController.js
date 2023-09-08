@@ -1,16 +1,16 @@
 import express from 'express';
 import path from 'path';
+import app from './app'
 
 const router = express.Router();
 
 router.get('/mainPage', (_, res) => {
-    res.sendFile(path.join(__dirname, 'mainPage.ejs'));
+    res.render('mainPage');
 });
 
 router.get('/aboutPage', (_, res) => {
-    res.sendFile(path.join(__dirname, 'aboutPage.ejs'));
+    res.render('aboutPage');
 });
-
 
 
 export default router;
